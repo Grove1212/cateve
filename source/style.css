@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.post img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 1:1 비율 */
+    object-fit: cover; /* 이미지를 네모 모양으로 자르기 */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.post img:hover {
+    transform: scale(1.05); /* 호버 시 확대 효과 */
+}
+
+/* 헤더 바: 검색창과 업로드 버튼을 포함하는 컨테이너 */
+.header-bar {
+    overflow: hidden; /* float 요소가 포함된 부모 컨테이너 높이 유지 */
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+/* clearfix: float로 인해 다른 요소에 영향이 가지 않도록 */
+.header-bar::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 검색창 스타일 */
+.search-bar {
+    float: left; /* 왼쪽 정렬 */
+    width: calc(100% - 150px); /* 검색창이 버튼을 제외한 공간 차지 */
+}
+
+.search-bar input {
+    width: 100%; /* 검색창의 너비를 부모 요소에 맞춤 */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* 업로드 버튼 */
+.upload-button-container {
+    float: right; /* 오른쪽 정렬 */
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+/* 하단 바 스타일 */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-bar a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bottom-bar a:hover {
+    color: #000;
+}
+
+.mypage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circular profile picture */
+    object-fit: cover;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    font-size: 16px;
+}
+
+.profile-details {
+    margin-bottom: 20px;
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-details p {
+    margin: 5px 0;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.post img:hover {
+    transform: scale(1.05);
+}

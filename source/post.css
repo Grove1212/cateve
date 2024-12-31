@@ -1,0 +1,94 @@
+/* 전체 페이지 스크롤 가능하도록 설정 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    overflow-y: auto; /* 수직 스크롤 활성화 */
+}
+
+.container {
+    width: 90%; /* 화면의 90% 넓이 */
+    max-width: 600px; /* 최대 600px로 제한 */
+    margin: 20px auto; /* 가운데 정렬 */
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* 내용이 잘리지 않도록 설정 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 프로필 섹션 */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 슬라이더 이미지 1:1 비율 */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider .slide {
+    display: none;
+}
+
+.slider .slide.active {
+    display: block;
+}
+
+.slider .slide img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 1:1 비율 유지 */
+    object-fit: cover; /* 이미지가 비율에 맞게 잘림 */
+}
+
+/* 좋아요 섹션 */
+.post-likes {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    border-top: 1px solid #dbdbdb;
+}
+
+/* 게시글 설명 */
+.post-description {
+    padding: 15px;
+    font-size: 14px;
+    color: #666;
+    max-height: 150px; /* 최대 높이 제한 */
+    overflow-y: auto; /* 설명이 길면 스크롤 */
+}
+
+.post-description::-webkit-scrollbar {
+    width: 6px;
+}
+
+.post-description::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+.post-description::-webkit-scrollbar-track {
+    background-color: #f9f9f9;
+}
